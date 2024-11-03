@@ -20,3 +20,5 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // パフォーマンス監視ツールを有効化
 reportWebVitals();
+
+reportWebVitals(console.log);
