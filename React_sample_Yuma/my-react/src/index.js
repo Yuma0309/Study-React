@@ -8,11 +8,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <ListTemplate src={books}>
-    <dt>
-      <a href={`https://wings.msn.to/books/${elem.isbn}/${elem.isbn}.jpg`}>
-        {elem.title} ({elem.price}円)
-      </a>
-    </dt>
-    <dd>{element.summary}</dd>
+    {elem => (
+      <>
+        <dt>
+          <a href={`https://wings.msn.to/books/${elem.isbn}/${elem.isbn}.jpg`}>
+            {elem.title} ({elem.price}円)
+          </a>
+        </dt>
+        <dd>{elem.summary}</dd>
+      </>
+    )}
   </ListTemplate>
 );
