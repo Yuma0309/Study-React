@@ -7,7 +7,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   // 正しい例
-  // <TypeProp prop1={new Member()} />
+  // <TypeProp prop2="男性" />
   // 誤った例
-  <TypeProp prop1="hoge" />
+  <TypeProp prop2="hoge" />
 );
