@@ -19,6 +19,8 @@ TypeProp.propTypes = {
   ]),
   // 数値型の配列
   prop4: PropTypes.arrayOf(PropTypes.number),
+  // 数値型のオブジェクト
+  prop5: PropTypes.objectOf(PropTypes.number),
 };
 
 export default TypeProp;
