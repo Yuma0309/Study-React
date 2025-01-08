@@ -7,7 +7,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   // 正しい例
-  // <TypeProp prop4={[15, 30]} />
+  // <TypeProp prop5={{ '鈴木花子': 15, '佐藤雫': 30 }} />
   // 誤った例
-  <TypeProp prop4={[333, '鈴木花子']} />
+  <TypeProp prop5={{ '鈴木花子': 15, '佐藤雫': '三十' }} />
 );
