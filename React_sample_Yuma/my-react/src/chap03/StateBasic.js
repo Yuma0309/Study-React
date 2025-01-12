@@ -4,8 +4,8 @@ export default function StateBasic({ init }) {
   const [count, setCount] = useState(init);
   // [カウント] ボタンでカウントアップ
   const handleClick = () => {
-    setCount(count + 1);
-    setCount(count + 1);
+    setCount(c => c + 1);
+    setCount(c => c + 1);
   };
   return (
     <>
