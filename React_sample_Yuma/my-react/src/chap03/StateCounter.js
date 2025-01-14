@@ -1,4 +1,4 @@
-import './StateCounter.css';
+import './css/StateCounter.css';
 
 export default function StateCounter({ step, onUpdate }) {
   // ボタンクリックで親State（count）にstep値だけ加算
