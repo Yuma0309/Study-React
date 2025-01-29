@@ -1,10 +1,10 @@
 // React関連のライブラリをインポート
 import ReactDOM from 'react-dom/client';
-import EventObj from './chap03/EventObj';
+import EventPoint from './chap03/EventPoint';
 
 // Reactアプリ（Appコンポーネント）を描画
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <EventObj />
+  <EventPoint />
 );
