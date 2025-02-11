@@ -1,10 +1,10 @@
 // React関連のライブラリをインポート
 import ReactDOM from 'react-dom/client';
-import EventOnce from './chap03/EventOnce';
+import EventPassive from './chap03/EventPassive';
 
 // Reactアプリ（Appコンポーネント）を描画
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <EventOnce />
+  <EventPassive />
 );
