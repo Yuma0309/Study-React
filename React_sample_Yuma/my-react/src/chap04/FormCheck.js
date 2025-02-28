@@ -6,7 +6,7 @@ export default function FormCheck() {
     agreement: true
   });
 
-  // チャックボックスの変更時に入力値をStateに反映
+  // チェックボックスの変更時に入力値をStateに反映
   const handleFormCheck = e => {
     setForm({
       ...form,

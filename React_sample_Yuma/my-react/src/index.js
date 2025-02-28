@@ -1,10 +1,10 @@
 // React関連のライブラリをインポート
 import ReactDOM from 'react-dom/client';
-import FormRadio from './chap04/FormRadio';
+import FormCheck from './chap04/FormCheck';
 
 // Reactアプリ（Appコンポーネント）を描画
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <FormRadio />
+  <FormCheck />
 );
