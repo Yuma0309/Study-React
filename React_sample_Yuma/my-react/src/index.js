@@ -1,10 +1,10 @@
 // React関連のライブラリをインポート
 import ReactDOM from 'react-dom/client';
-import StateTodo from './chap04/StateTodo';
+import FormBasic from './chap04/FormBasic';
 
 // Reactアプリ（Appコンポーネント）を描画
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <StateTodo />
+  <FormBasic />
 );
