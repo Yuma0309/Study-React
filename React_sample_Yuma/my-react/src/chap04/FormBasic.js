@@ -11,11 +11,9 @@ export default function FormBasic() {
   };
 
   // フォームを初期化
-  const { register, handleSubmit, formState: { errors } } = useForm({
-    defaultValues
-  });
-  // サブミット時の処理
-  const onsubmit = data => console.log(data);
+  const { register, handleSubmit,
+    formState: { errors, isDirty, isValid }
+  } = useForm({ defaultValues });
   const onerror = err => console.log(err);
 
   return (
@@ -88,7 +86,8 @@ export default function FormBasic() {
       <div>{errors.memo?.message}</div>
     </div>
     <div>
-      <button type="submit">送信</button>
+      <button type="submit"
+        disabled={!isDirty || !isValid}>送信</button>
     </div>
   </form>
   );
