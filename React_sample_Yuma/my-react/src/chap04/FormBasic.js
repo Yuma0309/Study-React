@@ -12,8 +12,17 @@ export default function FormBasic() {
 
   // フォームを初期化
   const { register, handleSubmit,
-    formState: { errors, isDirty, isValid }
+    formState: { errors, isDirty, isValid, isSubmitting }
   } = useForm({ defaultValues });
+  // サブミット時に4000ミリ秒に処理（ダミーの遅延処理）
+  const onsubmit = data => {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve();
+        console.log(data);
+      }, 4000);
+    });
+  };
   const onerror = err => console.log(err);
 
   return (
@@ -87,7 +96,8 @@ export default function FormBasic() {
     </div>
     <div>
       <button type="submit"
-        disabled={!isDirty || !isValid}>送信</button>
+        disabled={!isDirty || !isValid || isSubmitting}>送信</button>
+        {isSubmitting && <div>...送信中...</div>}
     </div>
   </form>
   );
