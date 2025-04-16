@@ -1,4 +1,4 @@
-import css, { globalCss, resolveCss } from './StyledCss.css';
+import css, { resolveCss } from './StyledCss.css';
 
 export default function StyledCss() {
   return (

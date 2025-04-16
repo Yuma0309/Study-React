@@ -1,15 +1,8 @@
 export default function StyledBasic() {
   return (
     <>
-      {/* <style jsx global>{`
-      h3 {
-        background-color: Yellow;
-      }
-      `}</style> */}
+      {/* Styled JSXによるスタイル定義 */}
       <style jsx>{`
-      // :global(h3) {
-      //   color: Red;
-      // }
       .panel {
         width: 300px;
         padding: 10px;
