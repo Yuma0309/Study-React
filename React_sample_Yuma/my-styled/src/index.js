@@ -11,11 +11,6 @@ import StyledDynamic from './StyledDynamic';
 /* eslint-enable no-unused-vars */
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
 
 root.render(
   <>
@@ -23,20 +18,6 @@ root.render(
     <StyledBasic />
   </>
 );
-
-// root.render(
-//   <>
-//     <h3>Styled JSXの外部化</h3>
-//     <StyledCss />
-//   </>
-// );
-
-// root.render(
-//   <StyledDynamic theme={{
-//     radius: true,
-//     color: 'royalblue'
-//   }} />
-// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
