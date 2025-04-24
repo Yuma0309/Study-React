@@ -11,6 +11,7 @@ export default function StyledDynamic({ theme }) {
     `}
     </style>
     <style jsx>{`
+    {/* Propsから動的に設定値を生成 */}
     .panel {
       border-radius: ${theme.radius ? '10px' : '0px'};
       background-color: ${theme.color};
