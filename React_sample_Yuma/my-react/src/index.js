@@ -1,14 +1,10 @@
 // React関連のライブラリをインポート
 import ReactDOM from 'react-dom/client';
-import StyledComp from './chap05/StyledComp';
-import GlobalStyle from './chap05/StyledGlobal';
+import StyledProps from './chap05/StyledProps';
 
 // Reactアプリ（Appコンポーネント）を描画
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <>
-    <GlobalStyle />
-    <StyledComp />
-  </>
+  <StyledProps />
 );
