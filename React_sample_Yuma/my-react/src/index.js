@@ -1,10 +1,20 @@
-// React関連のライブラリをインポート
+/** @jsxImportSource @emotion/react */
+import { css, Global } from '@emotion/react';
 import ReactDOM from 'react-dom/client';
-import EmotionComp from './chap05/EmotionComp';
+import EmotionJsx from './chap05/EmotionJsx';
 
 // Reactアプリ（Appコンポーネント）を描画
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+const global = css`
+  body {
+    background-color: Yellow;
+  }
+`;
+
 root.render(
-  <EmotionComp />
+  <>
+    <Global styles={global} />
+    <EmotionJsx />
+  </>
 );
