@@ -1,5 +1,6 @@
 import { ErrorBoundary } from 'react-error-boundary';
 import ErrorRetryThrow from './ErrorRetryThrow';
+import ErrorFallback from './ErrorFallback';
 
 export default function ErrorRetryRoot() {
   // エラー時に実行される処理
@@ -21,9 +22,10 @@ export default function ErrorRetryRoot() {
   return (
     <>
       <h3>Error Boundaryの基本</h3>
+      {/* エラー時に描画するコンテンツをコンポーネントとして指定 */}
       <ErrorBoundary
         onReset={handleReset}
-        fallbackRender={handleFallback}
+        FallbackComponent={ErrorFallback}
       >
         <ErrorRetryThrow />
       </ErrorBoundary>
