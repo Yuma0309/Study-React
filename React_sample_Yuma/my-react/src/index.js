@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom/client';
-import ErrorRoot from './chap05/ErrorRoot';
+import ErrorRetryRoot from './chap05/ErrorRetryRoot';
 
 // Reactアプリ（Appコンポーネント）を描画
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <ErrorRoot />
+  <ErrorRetryRoot />
 );
