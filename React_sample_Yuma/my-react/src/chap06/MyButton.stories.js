@@ -4,6 +4,9 @@ import MyButton from './MyButton';
 export default {
   title: 'MyApp/MyButton',
   component: MyButton,
+  args: {
+    label: 'Push!!',
+  },
 };
 
 // Index、Whiteストーリーを追加
