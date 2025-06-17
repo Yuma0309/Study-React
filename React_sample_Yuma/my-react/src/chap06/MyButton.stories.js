@@ -4,8 +4,10 @@ import MyButton from './MyButton';
 export default {
   title: 'MyApp/MyButton',
   component: MyButton,
-  args: {
-    label: 'Push!!',
+  argTypes: {
+    size: {
+      control: { type: 'select' },
+    },
   },
 };
 
