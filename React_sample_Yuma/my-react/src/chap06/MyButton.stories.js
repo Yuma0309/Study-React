@@ -5,9 +5,7 @@ export default {
   title: 'MyApp/MyButton',
   component: MyButton,
   argTypes: {
-    size: {
-      control: { type: 'select' },
-    },
+    onClick: { action: 'clicked' },
   },
 };
 
