@@ -5,7 +5,7 @@ export default {
   title: 'MyApp/MyButton',
   component: MyButton,
   argTypes: {
-    onClick: { action: 'clicked' },
+    handleClick: { action: 'clicked' },
   },
 };
 
