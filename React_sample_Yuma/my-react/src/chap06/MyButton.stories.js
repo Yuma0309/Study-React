@@ -6,6 +6,15 @@ import MyButton from './MyButton';
 export default {
   title: 'MyApp/MyButton',
   component: MyButton,
+  parameters: {
+    backgrounds: {
+      values: [
+        { name: 'ghostwhite', value: '#f8f8ff' },
+        { name: 'aquamarine', value: '#7fffd4' },
+        { name: 'coral', value: '#ff7f50' },
+      ],
+    },
+  },
 };
 
 // Indexストーリーの動作を宣言
@@ -22,7 +31,16 @@ export const Index = {
     await userEvent.click(button);
     await userEvent.click(button);
     expect(args.onClick).toHaveBeenCalledTimes(2);
-  }
+  },
+  parameters: {
+    backgrounds: {
+      values: [
+        { name: 'ghostwhite', value: '#f8f8ff' },
+        { name: 'aquamarine', value: '#7fffd4' },
+        { name: 'coral', value: '#ff7f50' },
+      ],
+    },
+  },
 };
 
 export const White = {
