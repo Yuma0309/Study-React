@@ -1,5 +1,3 @@
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-
 const preview = {
   parameters: {
     actions: { argTypesRegex: "^(on|handle)[A-Z].*" },
@@ -16,8 +14,5 @@ const preview = {
         { name: 'coral', value: '#ff7f50' },
       ],
     },
-    viewport: {
-      viewports: INITIAL_VIEWPORTS
-    }
   },
 };

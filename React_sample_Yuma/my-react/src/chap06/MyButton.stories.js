@@ -15,6 +15,19 @@ export default {
       ],
     },
   },
+  decorators: [
+    Story => (
+      <div style={{
+        height: 150,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#ccc',
+      }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 // Indexストーリーの動作を宣言
