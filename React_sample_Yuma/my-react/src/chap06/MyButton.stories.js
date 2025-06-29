@@ -9,6 +9,7 @@ export default {
   parameters: {
     layout: 'centered',
   },
+  tags: ['autodocs'],
 };
 
 // Indexストーリーの動作を宣言
