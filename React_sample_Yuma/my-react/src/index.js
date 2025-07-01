@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom/client';
-import FormMui from './chap06/FormMui';
+import QueryPre from './chap06/QueryPre';
 
 // Reactアプリ（Appコンポーネント）を描画
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <FormMui />
+  <QueryPre />
 );
