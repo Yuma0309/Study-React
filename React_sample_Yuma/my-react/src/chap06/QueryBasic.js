@@ -7,7 +7,7 @@ const sleep = delay => new Promise(resolve => setTimeout(resolve, delay));
 const fetchWeather = async () => {
   // 処理を遅延させるためのダミーの休止処理
   await sleep(2000);
-  const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Tokyo&lang=ja&appid=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`);
+  const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Tokyo&lang=ja&appid=a3efa5816300843820fe3f35e9540b32`);
   if (res.ok) { return res.json(); }
   throw new Error(res.statusText);
 };

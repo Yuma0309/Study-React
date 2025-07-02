@@ -1,9 +1,13 @@
 import ReactDOM from 'react-dom/client';
-import QueryPre from './chap06/QueryPre';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import QueryBasic from './chap06/QueryBasic';
 
 // Reactアプリ（Appコンポーネント）を描画
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+const cli = new QueryClient();
 root.render(
-  <QueryPre />
+  <QueryClientProvider client={cli}>
+    <QueryBasic />
+  </QueryClientProvider>
 );
