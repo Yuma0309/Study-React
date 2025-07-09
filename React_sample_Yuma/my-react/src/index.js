@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom/client';
-import StateEffect from './chap07/StateEffect';
+import HookTimer from './chap07/HookTimer';
 
 // Reactアプリ（Appコンポーネント）を描画
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <StateEffect init={0} />
+  <HookTimer init={10} />
 );
