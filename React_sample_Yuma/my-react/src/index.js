@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom/client';
-import HookTimer from './chap07/HookTimer';
+import HookEffect from './chap07/HookEffect';
 
 // Reactアプリ（Appコンポーネント）を描画
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <HookTimer init={10} />
+  <HookEffect init={10} />
 );

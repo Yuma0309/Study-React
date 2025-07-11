@@ -18,15 +18,14 @@ export default function HookEffect({ init }) {
     setCount(init);
   }, []);
 
-  // countが更新されるたびに実行される
-  useLayoutEffect(() => {
-    console.log('countが更新されました:', count);
-  });
+  const handleClick = () => {
+    setCount(c => c + 1);
+  };
+
   return (
-    <div>
-      <h1>HookEffect</h1>
-      <p>count: {count}</p>
-      <button onClick={() => setCount(count + 1)}>カウントアップ</button>
-    </div>
+    <>
+      <button onClick={handleClick}>カウント</button>
+      <p>{count}回、クリックされました。</p>
+    </>
   );
 }
