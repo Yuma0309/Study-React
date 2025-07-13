@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom/client';
-import HookEffect from './chap07/HookEffect';
+import HookRefNg from './chap07/HookRefNg';
 
 // Reactアプリ（Appコンポーネント）を描画
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <HookEffect init={10} />
+  <HookRefNg />
 );
