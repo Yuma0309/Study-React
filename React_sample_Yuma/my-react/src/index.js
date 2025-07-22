@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom/client';
-import HookRefForward from './chap07/HookRefForward';
+import HookCallbackRef from './chap07/HookCallbackRef';
 
 // Reactアプリ（Appコンポーネント）を描画
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <HookRefForward />
+  <HookCallbackRef />
 );
