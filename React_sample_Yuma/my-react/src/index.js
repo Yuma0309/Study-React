@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom/client';
-import HookReducerUp from './chap07/HookReducerUp';
+import HookReducerInit from './chap07/HookReducerInit';
 
 // Reactアプリ（Appコンポーネント）を描画
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <HookReducerUp init={0} />
+  <HookReducerInit init={0} />
 );
