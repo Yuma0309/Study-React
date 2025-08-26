@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import books from './books';
 
 // delayミリ秒だけ処理を遅延するコード
@@ -20,7 +19,7 @@ export function BookDetails({ isbn }) {
   );
 }
 
-export const CommentList = memo(function({ src, isPending }){
+export function CommentList({ src, isPending }) {
   // isPendingがtrueの場合はローディングメッセージを表示（7-7-3項で利用）
   if (isPending) return <p>Now Loading...</p>;
   // 受け取ったコメント情報をリスト表示
@@ -29,7 +28,7 @@ export const CommentList = memo(function({ src, isPending }){
       {src.map(c => <CommentItem key={c.id} src={c} />)}
     </ol>
   );
-});
+}
 
 // 個々のコメント表示で時間のかかる処理をシミュレート
 function CommentItem({ src }) {
