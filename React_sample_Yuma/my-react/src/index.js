@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom/client';
-import HookDefered from './chap07/HookDeferred';
+import HookDeferredTransition from './chap07/HookDeferredTransition';
 
 // Reactアプリ（Appコンポーネント）を描画
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <HookDefered />
+  <HookDeferredTransition />
 );
