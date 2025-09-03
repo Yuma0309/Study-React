@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import { useReducer, useDebugValue } from 'react';
 
 // カウンターを管理するためのState／Reducerを準備
 export default function useCounter(init, step) {
@@ -17,6 +17,7 @@ export default function useCounter(init, step) {
       count: init
     }
   );
+  useDebugValue(state.count >= 10 ? '10 Over' : '10 Less');
   // それぞれのボタンに対応したハンドラー
   const handleUp = () => dispatch({ type: 'update', step });
   const handleDown = () => dispatch({ type: 'update', step: -step });
