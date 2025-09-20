@@ -5,8 +5,6 @@ export default function InfoPage() {
     <>
     <p>Infoページです。</p>
     <Link to="..">トップ</Link>
-    {/* <Link to=".." relative="path">トップ</Link> */}
-    {/* <Link to="/" reloadDocument>トップ</Link> */}
     </>
   );
 }
