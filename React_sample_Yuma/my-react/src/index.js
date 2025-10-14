@@ -1,11 +1,14 @@
 import ReactDOM from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
-import routesParam from './chap08/routesParam';
+import routesHandle from './chap08/routesHandle';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Reactアプリ（Appコンポーネント）を描画
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-// React Routerを有効化
+// react-helmet-asyncを有効化
 root.render(
-  <RouterProvider router={routesParam} />
+  <HelmetProvider>
+    <RouterProvider router={routesHandle} />
+  </HelmetProvider>
 );
