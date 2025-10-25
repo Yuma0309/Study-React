@@ -7,7 +7,7 @@ import NotFoundPage from './NotFoundPage';
 import BookQueryPage from './BookQueryPage';
 import BookStatePage from './BookStatePage';
 import InvalidParamsPage from './InvalidParamsPage';
-import WeatherPage from './chap08/WeatherPage';
+import WeatherPage from './WeatherPage';
 
 const routesParam = createBrowserRouter(
   createRoutesFromElements(
