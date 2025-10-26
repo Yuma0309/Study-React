@@ -11,15 +11,16 @@ import WeatherPage from './WeatherPage';
 
 const fetchWeather = async ({ params }) => {
   const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${params.city}&lang=ja&appid=a3efa5816300843820fe3f35e9540b32`);
-  // 応答が成功の場合は、そのまま結果データを返す
   if (res.ok) { return res; }
-  // 成功以外の結果ではエラーデータを生成
-  return json({
-    "weather":[
-      {"id":803,"main":"Unknown","description":"不明","icon":"50d"}
-    ],
-    "name":"不明"
-  });
+  // レスポンスステータスに応じて、異なるエラー情報をスロー
+  switch (res.status) {
+    case 404:
+      throw json({ message: 'city is invalid!!' }, { status: 404 });
+    case 401:
+      throw json({ message: 'api key is invalid!!' }, { status: 401 });
+    default:
+      throw json({ message: 'api server is in trouble...' }, { status: 501 });
+  }
 }
 
 const routesParam = createBrowserRouter(
