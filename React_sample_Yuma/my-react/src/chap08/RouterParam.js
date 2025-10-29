@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useNavigation } from 'react-router-dom';
 
 export default function RouterParam() {
-  // カウント数を管理するためのStateを準備
+  // 遷移情報を取得
+  const navigation = useNavigation();
   const [count, setCount] = useState(0);
 
   return (
@@ -24,8 +25,12 @@ export default function RouterParam() {
         <li><NavLink to="/nothing/foo/bar">存在しないページ</NavLink></li>
       </ul>
       <hr />
-      {/* count／setCountをコンテキストに挿入 */}
-      <Outlet context={[count, setCount]} />
+      {
+        // 遷移の状態に応じて出力を分岐
+        navigation.state === 'loading' ?
+          <p>Loading...</p> :
+          <Outlet />
+      }
     </>
   );
 }
