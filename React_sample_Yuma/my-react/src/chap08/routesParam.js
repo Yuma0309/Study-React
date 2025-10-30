@@ -10,7 +10,11 @@ import InvalidParamsPage from './InvalidParamsPage';
 import WeatherPage from './WeatherPage';
 import CommonErrorPage from './CommonErrorPage';
 
+const sleep = ms => new Promise(res => setTimeout(res, ms));
+
 const fetchWeather = async ({ params }) => {
+  // ローディングメッセージを表示させるために処理を遅延
+  await sleep(2000);
   const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${params.city}&lang=ja&appid=a3efa5816300843820fe3f35e9540b32`);
   if (res.ok) { return res; }
   // レスポンスステータスに応じて、異なるエラー情報をスロー
