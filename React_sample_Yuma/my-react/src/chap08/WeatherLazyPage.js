@@ -1,5 +1,4 @@
-import { isRouteErrorResponse, json,
-  useLoaderData, useRouteError } from 'react-router-dom';
+import { isRouteErrorResponse, useLoaderData, useRouteError } from 'react-router-dom';
 
 const sleep = ms => new Promise(res => setTimeout(res, ms));
 
@@ -10,11 +9,11 @@ export async function loader({ params }) {
   if (res.ok) { return res; }
   switch (res.status) {
     case 404:
-      throw json({ message: 'city is invalid!!' }, { status: 404 });
+      throw new Response(JSON.stringify({ message: 'city is invalid!!' }), { status: 404 });
     case 401:
-      throw json({ message: 'api key is invalid!!' }, { status: 401 });
+      throw new Response(JSON.stringify({ message: 'api key is invalid!!' }), { status: 401 });
     default:
-      throw json({ message: 'unknown error...' }, { status: 503 });
+      throw new Response(JSON.stringify({ message: 'unknown error...' }), { status: 503 });
   }
 };
 

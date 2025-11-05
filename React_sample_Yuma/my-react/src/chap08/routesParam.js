@@ -67,8 +67,8 @@ const routesParam = createBrowserRouter(
       <Route path="/bookState" element={<BookStatePage />} />
       {/* 可変長パラメーターを定義 */}
       <Route path="/search/*" element={<SearchPage />} />
-      <Route path="/weather/:city" element={<WeatherPage />}
-        loader={fetchWeather} />
+      <Route path="/weather/:city"
+        lazy={() => import('./WeatherLazyPage')} />
       {/* 任意のページに対応するルート */}
       <Route path="*" element={<NotFoundPage />} />
     </Route>
