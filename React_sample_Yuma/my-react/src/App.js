@@ -1,9 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-// Appコンポーネントを定義
 function App() {
-  // 戻り値は出力内容
   return (
     <div className="App">
       <header className="App-header">
@@ -17,12 +15,12 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          こんにちは、React！！
+          {/* こんにちは、React！！ */}
+          Learn React
         </a>
       </header>
     </div>
   );
 }
 
-// Appコンポーネントをエクスポート
 export default App;
