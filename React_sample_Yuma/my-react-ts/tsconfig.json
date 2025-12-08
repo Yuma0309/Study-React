@@ -1,4 +1,5 @@
 {
+  // トランスパイル時の動作オプション
   "compilerOptions": {
     "target": "es5",
     "lib": [
@@ -20,6 +21,7 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
+  // トランスパイルの対象を指定
   "include": [
     "src"
   ]
