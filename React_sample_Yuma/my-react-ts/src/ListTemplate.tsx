@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { FC, ReactNode } from 'react';
 import type { Book } from './Book';
 
 // Propsの型宣言
@@ -7,16 +7,18 @@ type ListTemplateProps = {
   children: (b: Book) => ReactNode
 };
 
-export default function ListTemplate({ src, children }: ListTemplateProps) {
+const ListTemplate: FC<ListTemplateProps> = ({ src, children }) => {
   return (
     <dl>
       {
         src.map((elem, index) => (
-          <React.Fragment key={elem.isbn}>
+          <React.Fragment key={index}>
             {children(elem)}
           </React.Fragment>
       ))
       }
     </dl>
   );
-}
+};
+
+export default ListTemplate;
