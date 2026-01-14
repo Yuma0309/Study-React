@@ -1,10 +1,11 @@
-'use client';
-
+import { useTransition } from 'react';
 import { addReview, removeReview } from '@/lib/actions';
 
 export default function FormEdit({ src: { id, read, memo } }) {
-    return (
-    // サブミット時にaddReviewメソッドを呼び出し
+  const [isPending, startTransition] = useTransition();
+
+  // イベントハンドラー経由でサーバーアクションを呼び出し
+  return (
     <form action={addReview}>
     <input type="hidden" name="id" defaultValue={id} />
     <div className="mb-3">
@@ -19,13 +20,11 @@ export default function FormEdit({ src: { id, read, memo } }) {
         className="block bg-gray-100 border-2 border-gray-600 w-full rounded focus:bg-white focus:outline-none focus:border-red-500"
         defaultValue={memo}></textarea>
     </div>
-    <button type="submit"
-        className="bg-blue-600 text-white rounded px-4 py-2 mr-2 hover:bg-blue-500">
-        登録</button>
-        {/* [削除]ボタンでremoveReview関数を呼び出し */}
-    <button type="submit"
+    <button type="button"
       className="bg-red-600 text-white rounded px-4 py-2 hover:bg-red-500"
-      formAction={removeReview}>
+      onClick={() => {
+        startTransition(() => removeReview(id));
+      }}>
       削除</button>
     </form>
   );
